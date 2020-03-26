@@ -12,7 +12,7 @@ The output of the script will be `output.md` which contains 4 sections:
 * `apktool` must be set up. See: https://ibotpeaches.github.io/Apktool/. You only need to setup the `apktool.jar` file 
 and not the wrapper scripts. See https://ibotpeaches.github.io/Apktool/install/ for instructions.
 
-* Python 3.7 must be installed. You can install it using the official `NCA Python Installer`.
+* Python 3.7 must be installed.
 
 ## How to use
 After you integrate the latest product release, build an apk and compare the previous release against the new apk to see what has changed.
@@ -23,4 +23,4 @@ The script takes following arguments as input:
 * `languages` - languages to compare, excluding the default language of the app e.g. mk, de
 
 Run the script and supply the arguments e.g. 
-`python .\compare-strings.py ndb-app-1.22.0-whitelabel-dev.apk ndb-app-1.29.0-dev.apk de mk`
+`python .\compare-strings.py one.apk two.apk de mk`
