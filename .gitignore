@@ -1,0 +1,7 @@
+# ignore everything
+*
+
+# except for these files
+!.gitignore
+!compare-strings.py
+!README.md
