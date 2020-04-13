@@ -6,21 +6,18 @@ The output of the script will be `output.md` which contains 4 sections:
 3. Renamed - list of possibly renamed keys (language independent).
              Key is considered renamed if the same value appears in source apk and target apk, but the key is removed in the target apk. 
              This does not always mean that the key is renamed, but can give helpful hints, hence "possibly renamed".
-3. Changed - list of keys for which the value has changed between two versions (checked for each language specified)
+3. Changed - list of keys for which the value has changed between two versions (checked for each language specified in the params including the default language which is in `res/values`)
 
 ## Prerequisites 
-* `apktool` must be set up. See: https://ibotpeaches.github.io/Apktool/. You only need to setup the `apktool.jar` file 
-and not the wrapper scripts. See https://ibotpeaches.github.io/Apktool/install/ for instructions.
-
 * Python 3.7 must be installed.
 
 ## How to use
-After you integrate the latest product release, build an apk and compare the previous release against the new apk to see what has changed.
+Take two versions of an apk and see what has changed between two versions e.g. what is new in the latest release.
 
 The script takes following arguments as input:
 * `sourceApk` - path to the apk that is used as source (base) for comparison
 * `targetApk` - path to the apk that is used as target for comparison
-* `languages` - languages to compare, excluding the default language of the app e.g. mk, de
+* `languages` - languages to compare e.g. mk, de. Default language is always compared.
 
 Run the script and supply the arguments e.g. 
-`python .\compare-strings.py one.apk two.apk de mk`
+`python .\apk-strings-diff.py release-1.0.0.apk release-1.1.0.apk de mk`

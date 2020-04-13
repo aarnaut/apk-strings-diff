@@ -3,5 +3,6 @@
 
 # except for these files
 !.gitignore
-!compare-strings.py
+!apk-strings-diff.py
+!apktool.jar
 !README.md
